@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "f83f26ff-4fd0-4df7-acd4-7f89436f3f79",
+		"name": "PapasStore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37956968"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Pablo",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Palacios",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "ppalacios",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ppalacios@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678Pa$",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "42102425",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "ADMIN",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/user/register",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userLoggin",
+									"value": "ppalacios",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678Pa$",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2636/user/getUserId/67afb9f86790c39e26c7613e",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"user",
+								"getUserId",
+								"67afb9f86790c39e26c7613e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2636/user/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"user",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upDate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "ppalacios@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/user/upDate/67afb9f86790c39e26c7613e",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"user",
+								"upDate",
+								"67afb9f86790c39e26c7613e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:2636/user/deleteUser/67afba2f6790c39e26c76142",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"user",
+								"deleteUser",
+								"67afba2f6790c39e26c76142"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "addProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IxOWUyMjY3MjZjNTZmNmFhNDE4ODEiLCJ1c2VybmFtZSI6InBwYWxhY2lvcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTczOTY5MzYzOCwiZXhwIjoxNzM5NzA0NDM4fQ.5sUmDi4wDoT938Ql-fz5XE7GsDEtBecemODKRnaCfYI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Arroz",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "150g de Arroz ",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "20",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/product/addProduct",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"product",
+								"addProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2636/product/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"product",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2636/product/getProduct/67b19ef6061fdd74e9848e5c",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"product",
+								"getProduct",
+								"67b19ef6061fdd74e9848e5c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upDate",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IxOWUyMjY3MjZjNTZmNmFhNDE4ODEiLCJ1c2VybmFtZSI6InBwYWxhY2lvcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTczOTY5MzYzOCwiZXhwIjoxNzM5NzA0NDM4fQ.5sUmDi4wDoT938Ql-fz5XE7GsDEtBecemODKRnaCfYI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "price",
+									"value": "150",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/product/updateProd/67b19ef6061fdd74e9848e5c",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"product",
+								"updateProd",
+								"67b19ef6061fdd74e9848e5c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProd",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IxOWUyMjY3MjZjNTZmNmFhNDE4ODEiLCJ1c2VybmFtZSI6InBwYWxhY2lvcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTczOTY5MzYzOCwiZXhwIjoxNzM5NzA0NDM4fQ.5sUmDi4wDoT938Ql-fz5XE7GsDEtBecemODKRnaCfYI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/product/deleteProd/67b1a0b481d6a3198b8f7e6b",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"product",
+								"deleteProd",
+								"67b1a0b481d6a3198b8f7e6b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
