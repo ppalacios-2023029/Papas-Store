@@ -39,6 +39,10 @@ const userSchema = Schema(
             uppercase: true,
             enum: ['ADMIN', 'CLIENTE'],
             default: 'CLIENTE'
+        },
+        status: {
+            type: Boolean,
+            default: true
         }
     },
     {

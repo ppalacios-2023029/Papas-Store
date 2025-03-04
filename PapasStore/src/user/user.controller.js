@@ -2,11 +2,6 @@ import User from './user.model.js'
 import { checkPassword, encrypt } from '../../utils/encrypts.js'
 import { generateJwt } from '../../utils/jwt.js'
 
-export const test = (req, res) =>{
-    console.log('Test is running')
-    res.send({message: 'Test is running'})
-}
-
 export const register = async(req, res) =>{
     try{
         let data = req.body
@@ -52,8 +47,7 @@ export const login = async(req, res) =>{
     }catch(e){
         console.error(e)
         return res.status(500).send({message: 'General Error', e})
-    }
-    
+    } 
 }
 
 export const getAll = async(req, res) =>{
@@ -150,21 +144,40 @@ export const upDate = async(req, res) =>{
     }
 }
 
-export const deleteUser = async(req, res) =>{
+export const deleteUser = async(req,res)=>{
     try{
         let {id} = req.params
+        let usertok = req.user
+
+        if(id != usertok.id) return res.status(400).send({message: 'Invalid credentials'})
         let user = await User.findById(id)
 
-        if(!user) return res.send({message: 'User dont found'})
-
-        await User.deleteOne(user)
-        return res.send({message: 'User deleted'})
+        if(!user) return res.send(
+            {
+                success: false,
+                message: 'User not found'
+            }
+        )
+        await User.updateOne(
+            {
+                _id:user._id
+            },
+            {
+                $set: {status: false}
+            }
+        )
+        return res.send(
+            { 
+                success: true,
+                message: 'User deleted'
+            }
+        )
     }catch(e){
         console.error(e)
         return res.status(500).send(
             {
                 success: false,
-                message: 'General Error',
+                message: 'Generate Error',
                 e
             }
         )

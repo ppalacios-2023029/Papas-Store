@@ -14,8 +14,23 @@ export const addProduct = async(req, res) =>{
 
 export const getAll = async(req, res) =>{
     try{
-        const {limit = 20, skip = 0} = req.query
-        const products = await Product.find()
+        const {limit = 20, skip = 0, agotado, masvendidos, categoria} = req.query
+
+        let filter = {}
+
+        if(agotado){
+            filter.agotado = agotado
+        }
+
+        if(masvendidos){
+            filter.masvendidos = masvendidos
+        }
+
+        if(categoria){
+            filter.categoria = categoria
+        }
+
+        const products = await Product.find(filter)
             .skip(skip)
             .limit(limit)
 
@@ -64,7 +79,7 @@ export const getProduct = async (req, res) =>{
             {
                 success: false,
                 message: 'General error', 
-                err
+                e
             }
         )
     }

@@ -47,3 +47,25 @@ export const isAdmin = async(req, res, next) =>{
         )
     }
 }
+
+export const isUser = async(req, res, next) =>{
+    try{
+        const {user} = req
+
+        if(!user || user.role !== 'CLIENTE') return res.status(403).send(
+            {
+                success: false,
+                message: `You dont have access | username ${user.username}`
+            }
+        )
+        next()
+    }catch(e){
+        console.error(e)
+        return res.status(403).send(
+            {
+                success: false,
+                message: 'Error with authorization'
+            }
+        )
+    }
+}
