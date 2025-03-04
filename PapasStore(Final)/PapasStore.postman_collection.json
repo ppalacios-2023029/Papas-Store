@@ -1,0 +1,773 @@
+{
+	"info": {
+		"_postman_id": "f83f26ff-4fd0-4df7-acd4-7f89436f3f79",
+		"name": "PapasStore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37956968"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Alejandro",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Palacios",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "apalacios",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "apalacios@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678Pa$",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "42102425",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "ADMIN",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/user/register",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userLoggin",
+									"value": "apalacios",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678Pa$",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2636/user/getUserId/67afb9f86790c39e26c7613e",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"user",
+								"getUserId",
+								"67afb9f86790c39e26c7613e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2636/user/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"user",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upDate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "ppalacios@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/user/upDate/67afb9f86790c39e26c7613e",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"user",
+								"upDate",
+								"67afb9f86790c39e26c7613e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:2636/user/deleteUser/67afba2f6790c39e26c76142",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"user",
+								"deleteUser",
+								"67afba2f6790c39e26c76142"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "addProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NmI1NjIwYmI4MWJkMmExNTQzNDQiLCJ1c2VybmFtZSI6InBwYWxhY2lvcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0MTA1Njk4MSwiZXhwIjoxNzQxMDY3NzgxfQ.Q-malVUyIjhWM0dP4QL7NnTwqUGeEVvFUqf2GNyXtn4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Pantalon Negro ",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Zara",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "350",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "67c66c80e57a3002243b956f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/product/addProduct",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"product",
+								"addProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NmI4MGQ1NTllY2I2NTk5YTcwMGQiLCJ1c2VybmFtZSI6ImFwYWxhY2lvcyIsInJvbGUiOiJDTElFTlRFIiwiaWF0IjoxNzQxMDU3MDMxLCJleHAiOjE3NDEwNjc4MzF9.01KYjllcEuZvGZNKZH2C0RmKttgXpEy7tbSrVSWD84I",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/product/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"product",
+								"getAll"
+							],
+							"query": [
+								{
+									"key": "Auth",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProduct",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NmI4MGQ1NTllY2I2NTk5YTcwMGQiLCJ1c2VybmFtZSI6ImFwYWxhY2lvcyIsInJvbGUiOiJDTElFTlRFIiwiaWF0IjoxNzQxMDU3MDMxLCJleHAiOjE3NDEwNjc4MzF9.01KYjllcEuZvGZNKZH2C0RmKttgXpEy7tbSrVSWD84I",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/product/getProduct/67c66f56208e84abff8cecc6",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"product",
+								"getProduct",
+								"67c66f56208e84abff8cecc6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upDate",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NmI1NjIwYmI4MWJkMmExNTQzNDQiLCJ1c2VybmFtZSI6InBwYWxhY2lvcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0MTA1Njk4MSwiZXhwIjoxNzQxMDY3NzgxfQ.Q-malVUyIjhWM0dP4QL7NnTwqUGeEVvFUqf2GNyXtn4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "price",
+									"value": "400",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/product/updateProd/67c66f56208e84abff8cecc6",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"product",
+								"updateProd",
+								"67c66f56208e84abff8cecc6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProd",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NmI1NjIwYmI4MWJkMmExNTQzNDQiLCJ1c2VybmFtZSI6InBwYWxhY2lvcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0MTA1Njk4MSwiZXhwIjoxNzQxMDY3NzgxfQ.Q-malVUyIjhWM0dP4QL7NnTwqUGeEVvFUqf2GNyXtn4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/product/deleteProd/67c66f37c5a1bd8b993330d7",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"product",
+								"deleteProd",
+								"67c66f37c5a1bd8b993330d7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NmI1NjIwYmI4MWJkMmExNTQzNDQiLCJ1c2VybmFtZSI6InBwYWxhY2lvcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0MTA1Njk4MSwiZXhwIjoxNzQxMDY3NzgxfQ.Q-malVUyIjhWM0dP4QL7NnTwqUGeEVvFUqf2GNyXtn4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Ropa",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Ropa Casual",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/category/registerCat",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"category",
+								"registerCat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NmI4MGQ1NTllY2I2NTk5YTcwMGQiLCJ1c2VybmFtZSI6ImFwYWxhY2lvcyIsInJvbGUiOiJDTElFTlRFIiwiaWF0IjoxNzQxMDU3MDMxLCJleHAiOjE3NDEwNjc4MzF9.01KYjllcEuZvGZNKZH2C0RmKttgXpEy7tbSrVSWD84I",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/category/getCat/67c66c80e57a3002243b956f",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"category",
+								"getCat",
+								"67c66c80e57a3002243b956f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NmI1NjIwYmI4MWJkMmExNTQzNDQiLCJ1c2VybmFtZSI6InBwYWxhY2lvcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0MTA1Njk4MSwiZXhwIjoxNzQxMDY3NzgxfQ.Q-malVUyIjhWM0dP4QL7NnTwqUGeEVvFUqf2GNyXtn4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/category/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"category",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NmI1NjIwYmI4MWJkMmExNTQzNDQiLCJ1c2VybmFtZSI6InBwYWxhY2lvcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0MTA1Njk4MSwiZXhwIjoxNzQxMDY3NzgxfQ.Q-malVUyIjhWM0dP4QL7NnTwqUGeEVvFUqf2GNyXtn4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Ropa",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/category/upDate/67c66c80e57a3002243b956f",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"category",
+								"upDate",
+								"67c66c80e57a3002243b956f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NmI1NjIwYmI4MWJkMmExNTQzNDQiLCJ1c2VybmFtZSI6InBwYWxhY2lvcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0MTA1Njk4MSwiZXhwIjoxNzQxMDY3NzgxfQ.Q-malVUyIjhWM0dP4QL7NnTwqUGeEVvFUqf2GNyXtn4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/category/deleteCat/67c66dbdfd4d73b2f7f0d443",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"category",
+								"deleteCat",
+								"67c66dbdfd4d73b2f7f0d443"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "AddToCart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NmI4MGQ1NTllY2I2NTk5YTcwMGQiLCJ1c2VybmFtZSI6ImFwYWxhY2lvcyIsInJvbGUiOiJDTElFTlRFIiwiaWF0IjoxNzQxMDU3MDMxLCJleHAiOjE3NDEwNjc4MzF9.01KYjllcEuZvGZNKZH2C0RmKttgXpEy7tbSrVSWD84I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userId",
+									"value": "67c66b80d559ecb6599a700d",
+									"type": "text"
+								},
+								{
+									"key": "productId",
+									"value": "67c6742038c657b07de30547",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/cart/addToCart",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"cart",
+								"addToCart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCart",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NmI4MGQ1NTllY2I2NTk5YTcwMGQiLCJ1c2VybmFtZSI6ImFwYWxhY2lvcyIsInJvbGUiOiJDTElFTlRFIiwiaWF0IjoxNzQxMDU3MDMxLCJleHAiOjE3NDEwNjc4MzF9.01KYjllcEuZvGZNKZH2C0RmKttgXpEy7tbSrVSWD84I",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/cart/getCart/67c672c438c657b07de30543",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"cart",
+								"getCart",
+								"67c672c438c657b07de30543"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NmI4MGQ1NTllY2I2NTk5YTcwMGQiLCJ1c2VybmFtZSI6ImFwYWxhY2lvcyIsInJvbGUiOiJDTElFTlRFIiwiaWF0IjoxNzQxMDU3MDMxLCJleHAiOjE3NDEwNjc4MzF9.01KYjllcEuZvGZNKZH2C0RmKttgXpEy7tbSrVSWD84I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "productId",
+									"value": "67c6742038c657b07de30547",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/cart/removeFromCart/67c672c438c657b07de30543",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"cart",
+								"removeFromCart",
+								"67c672c438c657b07de30543"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCart",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NmI4MGQ1NTllY2I2NTk5YTcwMGQiLCJ1c2VybmFtZSI6ImFwYWxhY2lvcyIsInJvbGUiOiJDTElFTlRFIiwiaWF0IjoxNzQxMDU3MDMxLCJleHAiOjE3NDEwNjc4MzF9.01KYjllcEuZvGZNKZH2C0RmKttgXpEy7tbSrVSWD84I",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/cart/clearCart/67c672c438c657b07de30543",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"cart",
+								"clearCart",
+								"67c672c438c657b07de30543"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invoice",
+			"item": [
+				{
+					"name": "Generate Invoice",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NmI4MGQ1NTllY2I2NTk5YTcwMGQiLCJ1c2VybmFtZSI6ImFwYWxhY2lvcyIsInJvbGUiOiJDTElFTlRFIiwiaWF0IjoxNzQxMDU3MDMxLCJleHAiOjE3NDEwNjc4MzF9.01KYjllcEuZvGZNKZH2C0RmKttgXpEy7tbSrVSWD84I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "cartId",
+									"value": "67c672c438c657b07de30543",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/invoice/generateInvoice",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"invoice",
+								"generateInvoice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll Invoice User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NmI4MGQ1NTllY2I2NTk5YTcwMGQiLCJ1c2VybmFtZSI6ImFwYWxhY2lvcyIsInJvbGUiOiJDTElFTlRFIiwiaWF0IjoxNzQxMDU3MDMxLCJleHAiOjE3NDEwNjc4MzF9.01KYjllcEuZvGZNKZH2C0RmKttgXpEy7tbSrVSWD84I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:2636/invoice/getInvoiceByUser/67c66b80d559ecb6599a700d",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"invoice",
+								"getInvoiceByUser",
+								"67c66b80d559ecb6599a700d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2NmI4MGQ1NTllY2I2NTk5YTcwMGQiLCJ1c2VybmFtZSI6ImFwYWxhY2lvcyIsInJvbGUiOiJDTElFTlRFIiwiaWF0IjoxNzQxMDU3MDMxLCJleHAiOjE3NDEwNjc4MzF9.01KYjllcEuZvGZNKZH2C0RmKttgXpEy7tbSrVSWD84I",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/invoice/getInvoiceById/67c68320e15c3b1012b9f864",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"invoice",
+								"getInvoiceById",
+								"67c68320e15c3b1012b9f864"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
